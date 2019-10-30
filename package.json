@@ -1,0 +1,29 @@
+{
+  "name": "dsa_kata",
+  "version": "0.0.0",
+  "description": "Data Structures and Algorithms in JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "data",
+    "structures",
+    "algorithms",
+    "interview"
+  ],
+  "author": "Christian Sakai",
+  "license": "MIT",
+  "dependencies": {
+    "jest": "^24.9.0",
+    "jsdoc": "^3.6.3",
+    "standard": "^14.3.1"
+  },
+  "standard": {
+    "globals": [
+      "describe",
+      "it",
+      "expect"
+    ]
+  }
+}
