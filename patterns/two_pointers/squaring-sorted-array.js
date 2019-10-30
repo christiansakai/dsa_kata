@@ -5,7 +5,7 @@
 /**
  * Find first non negative index. From that index, make two pointers.
  * Iterate the pointers alternately, compare the square.
- * Push the number that has the smaller square, and increment that pointer. 
+ * Push the number that has the smaller square, and increment that pointer.
  * Time Complexity: O(N)
  * Space Complexity: O(N)
  */
@@ -17,11 +17,11 @@ function makeSquares1 (arr) {
   if (arr.length <= 1) {
     return arr
   }
-    
+
   const squares = Array(arr.length).fill(0)
 
   let lowestSquareIndex = 0
-  let startingIndex = findFirstNonNegativeIndex(arr)
+  const startingIndex = findFirstNonNegativeIndex(arr)
   squares[lowestSquareIndex] = arr[startingIndex]
   lowestSquareIndex += 1
 
@@ -88,7 +88,7 @@ function makeSquares2 (arr) {
   if (arr.length <= 1) {
     return arr
   }
-    
+
   const squares = Array(arr.length).fill(0)
 
   let i = 0
@@ -110,7 +110,7 @@ function makeSquares2 (arr) {
     highestSquareIndex -= 1
   }
 
-  return squares;
+  return squares
 }
 
 module.exports = {
