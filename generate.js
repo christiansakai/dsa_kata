@@ -53,7 +53,7 @@ module.exports = {
 }
 
 function getTestFileTemplateString (pathFileToGenerate) {
-  const testFileTemplate = `const solution = require('./${pathFileToGenerate}')
+  const testFileTemplate = `const solution = require('./${path.basename(pathFileToGenerate)}')
 
 describe('The Problem', () => {
   describe('The Function', () => {

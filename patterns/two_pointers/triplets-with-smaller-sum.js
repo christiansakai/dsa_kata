@@ -17,7 +17,7 @@
  * this into the calculation.
  *
  * Time Complexity: O(N^2)
- * Space Complexity: O(1)
+ * Space Complexity: O(N) // for new sorted array
 */
 function tripletsWithSmallerSum1 (arr, target) {
   if (!Array.isArray(arr)) {
@@ -69,8 +69,8 @@ function tripletsWithSmallerSum1 (arr, target) {
  * numbers from the second number to the third number. We add
  * this into the calculation.
  *
- * Time Complexity: O(N^2)
- * Space Complexity: O(1)
+ * Time Complexity: O(N^3)
+ * Space Complexity: O(N) // for new sorted array
 */
 function tripletsWithSmallerSum2 (arr, target) {
   if (!Array.isArray(arr)) {

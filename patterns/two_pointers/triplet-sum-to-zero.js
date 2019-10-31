@@ -13,7 +13,7 @@
  * as `unique-pairs-with-target-sum`.
  *
  * Time Complexity: O(N^2)
- * Space Complexity: O(1)
+ * Space Complexity: O(N) // for new sorted array
  */
 function searchTriplets (arr) {
   if (!Array.isArray(arr)) {
