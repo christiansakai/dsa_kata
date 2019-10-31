@@ -31,6 +31,10 @@ function tripletSumCloseToTarget (arr, targetSum) {
     throw new Error('arr must be an Array')
   }
 
+  if (typeof targetSum !== 'number') {
+    throw new Error('targetSum must be a number')
+  }
+
   if (arr.length < 3) {
     return null
   }

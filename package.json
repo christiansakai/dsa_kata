@@ -4,6 +4,7 @@
   "description": "Data Structures and Algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
+    "generate": "node generate.js",
     "test": "jest --runInBand --watch"
   },
   "keywords": [
