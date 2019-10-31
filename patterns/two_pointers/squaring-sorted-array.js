@@ -8,6 +8,9 @@
  * Push the number that has the smaller square, and increment that pointer.
  * Time Complexity: O(N)
  * Space Complexity: O(N)
+ *
+ * @param {number[]} arr - The array of numbers
+ * @returns {number[]} - The array of squared numbers sorted
  */
 function makeSquares1 (arr) {
   if (!Array.isArray(arr)) {
@@ -79,6 +82,9 @@ function findFirstNonNegativeIndex (arr) {
  *
  * Time Complexity: O(N)
  * Space Complexity: O(N)
+ *
+ * @param {number[]} arr - The array of numbers
+ * @returns {number[]} - The array of squared numbers sorted
  */
 function makeSquares2 (arr) {
   if (!Array.isArray(arr)) {

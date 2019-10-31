@@ -4,7 +4,7 @@
   "description": "Data Structures and Algorithms in JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --runInBand --watch"
   },
   "keywords": [
     "data",
