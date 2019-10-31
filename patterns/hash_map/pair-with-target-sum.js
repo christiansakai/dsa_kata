@@ -10,6 +10,7 @@
  * If the complement number already in the hash map, we have
  * found the pair.
  *
+ * Assumption: Array of numbers only containing unique numbers
  * Time Complexity: O(N)
  * Space Complexity: O(N)
  *
