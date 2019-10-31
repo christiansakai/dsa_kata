@@ -1,3 +1,20 @@
+/**
+ * Given an array of unsorted numbers, find all unique
+ * triplets in it that add up to zero.
+ */
+
+/**
+ * Sort the array so that same numbers are close to one another.
+ * Iterate through the array, skipping same numbers. In this way
+ * we make sure that the first number that we choose are the last of its kind.
+ * This number will be our first number in the triplet.
+ * To find the next numbers, we subtract 0 to our first number,
+ * then we start searching the array using the same method
+ * as `unique-pairs-with-target-sum`.
+ *
+ * Time Complexity: O(N^2)
+ * Space Complexity: O(1)
+ */
 function searchTriplets (arr) {
   if (!Array.isArray(arr)) {
     throw new Error('arr must be an Array')
