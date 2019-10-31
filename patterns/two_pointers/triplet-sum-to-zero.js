@@ -10,36 +10,45 @@ function searchTriplets (arr) {
   const sortedArr = arr.sort((a, b) => a - b)
   const triplets = []
 
-  for (let i = 0; i < sortedArr; i++) {
-    if (i > 0 && arr[i] === arr[i - 1]) {
+  for (let i = 0; i < sortedArr.length - 2; i++) {
+    if (sortedArr[i] === sortedArr[i + 1]) {
       continue
     }
 
-    const x = arr[i]
-    const yz = 0 - x
-  }
-}
+    const remaining = 0 - sortedArr[i]
 
-function searchPair (
-  sortedArr,
-  targetSum,
-  startingIndex,
-  numToExclude
-) {
-  let left = startingIndex
-  let right = sortedArr.length - 1
+    let j = i + 1
+    let k = sortedArr.length - 1
 
-  while (left < right) {
-    const sum = sortedArr[left] + sortedArr[right]
+    while (j < k) {
+      const sum = sortedArr[j] + sortedArr[k]
 
-    if (sum === targetSum) {
-      return [left, right]
-    } else if (sum > targetSum) {
-      right -= 1
-    } else if (sum < targetSum) {
-      left += 1
+      if (sum === remaining) {
+        while (j < k && sortedArr[j] === sortedArr[j + 1]) {
+          j += 1
+        }
+
+        while (j < k && sortedArr[k] === sortedArr[k - 1]) {
+          k -= 1
+        }
+
+        triplets.push([
+          sortedArr[i],
+          sortedArr[j],
+          sortedArr[k]
+        ])
+
+        j += 1
+        k -= 1
+      } else if (sum < remaining) {
+        j += 1
+      } else {
+        k -= 1
+      }
     }
   }
+
+  return triplets
 }
 
 module.exports = {
