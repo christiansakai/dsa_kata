@@ -5,9 +5,14 @@
 */
 
 /**
+ * Iterate through the array while remembering the position
+ * of where we should put the next non duplicate.
+ * When iterating, skip all the duplicate numbers. When
+ * we find a non duplicate number, put that in the position
+ * that we remember.
  *
- * Time Complexity
- * Space Complexity
+ * Time Complexity O(N)
+ * Space Complexity O(1)
  */
 function removeDuplicates (arr) {
   if (!Array.isArray(arr)) {
