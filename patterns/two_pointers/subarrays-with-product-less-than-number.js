@@ -33,15 +33,17 @@ function findSubArrays (arr, target) {
     num *= arr[right]
 
     if (num < target) {
-      subArrays.push(getActual(arr, left, right))
+      subArrays.push(getSliceFromTo(arr, left, right))
     } else {
       while (num >= target) {
         num /= arr[left]
         left += 1
       }
 
+      const tempArr = []
       while (left <= right) {
-        subArrays.push(getActual(arr, left, right))
+        tempArr.push(arr[left])
+        subArrays.push([...tempArr])
         left += 1
       }
 
@@ -54,13 +56,13 @@ function findSubArrays (arr, target) {
   return subArrays
 }
 
-function getActual (arr, from, to) {
-  const a = []
+function getSliceFromTo (arr, from, to) {
+  const slice = []
   for (let i = from; i <= to; i++) {
-    a.push(arr[i])
+    slice.push(arr[i])
   }
 
-  return a
+  return slice
 }
 
 module.exports = {
