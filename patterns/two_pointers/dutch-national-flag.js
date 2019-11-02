@@ -25,7 +25,8 @@ function dutchFlagSort (arr) {
   let start = 0
   let end = arr.length - 1
 
-  for (let i = 0; i < arr.length; i++) {
+  let i = 0
+  while (i <= end) {
     if (arr[i] === 0) {
       const temp = arr[start]
 
@@ -33,7 +34,14 @@ function dutchFlagSort (arr) {
       start += 1
 
       arr[i] = temp
-    } else if (arr[i] === 2) {
+
+      i += 1
+    } else if (arr[i] === 1) {
+      i += 1
+    } else {
+      // decrement 'high' only
+      // because after the swap the number at index 'i'
+      // could still be 0, 1, or 2
       const temp = arr[end]
 
       arr[end] = arr[i]
@@ -42,8 +50,6 @@ function dutchFlagSort (arr) {
       arr[i] = temp
     }
   }
-
-  console.log(arr)
 
   return arr
 }

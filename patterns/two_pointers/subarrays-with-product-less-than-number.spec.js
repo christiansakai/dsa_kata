@@ -12,7 +12,8 @@ describe('Subarrays with Product Less Than a Target (Medium)', () => {
         [2],
         [5],
         [2, 5],
-        [3, 5],
+        [3],
+        [5, 3],
         [10]
       ])
     })

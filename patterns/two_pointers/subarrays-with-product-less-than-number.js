@@ -40,18 +40,16 @@ function findSubArrays (arr, target) {
         left += 1
       }
 
-      while (left < right) {
+      while (left <= right) {
         subArrays.push(getActual(arr, left, right))
         left += 1
       }
+
+      num = 1
     }
 
     right += 1
-
-    console.log({ left, right })
   }
-
-  console.log(subArrays)
 
   return subArrays
 }
