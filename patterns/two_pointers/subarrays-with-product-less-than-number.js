@@ -22,53 +22,47 @@ function findSubArrays (arr, target) {
     return []
   }
 
-  const subarrays = []
+  const subArrays = []
 
   let left = 0
   let right = 0
 
   let num = 1
-  let subArrayIndexes = []
 
   while (right < arr.length) {
     num *= arr[right]
 
     if (num < target) {
-      subArrayIndexes.push(right)
+      subArrays.push(getActual(arr, left, right))
     } else {
-      subarrays.push(subArrayIndexes)
-      subArrayIndexes = []
-
       while (num >= target) {
         num /= arr[left]
         left += 1
       }
 
       while (left < right) {
-        subArrayIndexes.push([left, right])
+        subArrays.push(getActual(arr, left, right))
         left += 1
       }
     }
 
     right += 1
+
+    console.log({ left, right })
   }
 
-  const x = getActual(subarrays, arr)
+  console.log(subArrays)
 
-  console.log(subarrays)
-
-  return x
+  return subArrays
 }
 
-function getActual (subArrayIndexes, arr) {
-  return subArrayIndexes.map(([from, to]) => {
-    const a = []
-    for (let i = from; i <= to; i++) {
-      a.push(arr[i])
-    }
+function getActual (arr, from, to) {
+  const a = []
+  for (let i = from; i <= to; i++) {
+    a.push(arr[i])
+  }
 
-    return a
-  })
+  return a
 }
 
 module.exports = {
