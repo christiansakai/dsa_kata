@@ -9,9 +9,16 @@
 */
 
 /**
+ * We keep two pointers, start an end. If we encounter 0,
+ * move that to the start pointer and increment that pointer.
+ * If we encounter 2, move that to the end pointer and
+ * decrement that pointer.
+ * At the end of the loop, the 0s will be at the left side
+ * and the 2s will be at the right side. Leaving 1s at the
+ * middle.
  *
- * Time Complexity
- * Space Complexity
+ * Time Complexity: O(N)
+ * Space Complexity: O(1)
  */
 function dutchFlagSort (arr) {
   if (!Array.isArray(arr)) {
